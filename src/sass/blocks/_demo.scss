@@ -1,0 +1,81 @@
+.demo {
+	min-height: 394px;
+	padding: 13px 0 22px;
+	background-image: linear-gradient(0deg, rgba(230, 234, 236, 1) 0%, rgba(254, 254, 254, 1) 100%);
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	&-item {
+		position: relative;
+		flex: 0 0 306px;
+		min-height: 360px;
+		box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
+		background-image: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 1) 0%,
+			rgba(243, 243, 243, 1) 100%
+		);
+		border-radius: 4px;
+		padding: 35px 26px 29px;
+		&__header {
+			display: flex;
+			padding-left: 53px;
+			padding-bottom: 14px;
+			border-bottom: 1px dotted #000;
+		}
+		&__icon {
+			position: absolute;
+			top: 11px;
+			left: 24px;
+			width: 47px;
+			height: 104px;
+			img {
+				max-width: 100%;
+			}
+		}
+
+		&__title {
+			font-family: Swiss, sans-serif;
+			font-size: 24px;
+			font-weight: normal;
+			color: #353535;
+			letter-spacing: -0.68px;
+			margin: 0;
+			line-height: 1;
+		}
+
+		&__img {
+			width: 254px;
+			height: 124px;
+			margin-top: 18px;
+			border: 1px solid #ccc;
+			box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
+			border-radius: 6px;
+			overflow: hidden;
+			img {
+				max-width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__text {
+			margin-top: 21px;
+			font-size: 12px;
+			color: #808080;
+			line-height: 15px;
+		}
+	}
+	&__btn {
+		margin-top: 19px;
+		text-shadow: none;
+		background-image: linear-gradient(to top, #121212 0%, #494949 100%);
+		&:hover {
+			background-image: linear-gradient(
+				to top,
+				rgba(0, 0, 0, 0.4) 0%,
+				rgba(255, 255, 255, 0.4) 100%
+			);
+		}
+	}
+}

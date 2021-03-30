@@ -1,0 +1,17 @@
+.btn {
+	width: 101px;
+	height: 38px;
+	background-color: #5f5f5f;
+	background-image: linear-gradient(to top, #e77d00 0%, #f6a60d 100%);
+	border: none;
+	border-radius: 6px;
+	color: #fff;
+	font-family: SwissMediumItalic, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	text-shadow: 1px 1px 0 #a55d08;
+	text-transform: uppercase;
+	&:hover{
+		background-image: linear-gradient(to top, #bb6401 0%, #f8b22f 100%);
+	}
+}

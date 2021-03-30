@@ -1,0 +1,32 @@
+.promo {
+	min-height: 317px;
+	padding: 6px 0 7px;
+	background-color: #cad2d7;
+	margin-top: 1px;
+	&__content {
+		width: 934px;
+		height: 304px;
+		box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
+		border-radius: 6px;
+		background: no-repeat;
+		background-color: #fff;
+		background-image: url('../img/bg/first_bg.png');
+		text-align: right;
+		padding-top: 109px;
+		padding-right: 37px;
+	}
+	&__text{
+		font-family: Swiss, sans-serif;
+		font-size: 28px;
+		font-weight: normal;
+		line-height: 31px;
+		color: #353535;
+		span{
+			font-family: SwissMediumItalic, sans-serif;
+			font-weight: 500;
+			font-size: 30px;
+			color: $main-color;
+			text-transform: uppercase;
+		}
+	}
+}

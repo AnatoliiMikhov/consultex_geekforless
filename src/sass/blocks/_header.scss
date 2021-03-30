@@ -1,24 +1,142 @@
 .header {
-	padding: 52px 0 45px;
 	min-height: 144px;
 	background-image: linear-gradient(#161616, #414141);
-}
-.logo {
-	display: flex;
-	align-items: flex-end;
-	&__text {
-		text-align: right;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 144px;
 	}
-	&__heading {
-		margin: 0;
-		font-family: Swiss, sans-serif;
-		font-size: 42px;
-		font-weight: normal;
-		color: #fff;
+
+	.logo {
+		display: flex;
+		align-items: center;
+
+		&__text {
+			text-align: right;
+			margin-right: 2px;
+		}
+
+		&__heading {
+			margin: 0;
+			font-family: Swiss, sans-serif;
+			font-size: 42px;
+			font-weight: normal;
+			line-height: 1;
+			letter-spacing: -2.1px;
+			color: #fff;
+		}
+
+		&__subheading {
+			color: #fff;
+			font-size: 15px;
+			font-style: italic;
+			line-height: 0.1;
+		}
 	}
-	&__subheading {
-		color: #fff;
-		font-size: 15px;
-		font-style: italic;
+
+	.nav {
+		align-self: flex-end;
+		margin-bottom: 1px;
+
+		&-list {
+			display: inline-flex;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		&-item {
+			position: relative;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 132px;
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.31);
+			background-image: linear-gradient(
+				to top,
+				rgba(0, 0, 0, 0.4) 0%,
+				rgba(255, 255, 255, 0.4) 100%
+			);
+			border-radius: 6px 6px 0 0;
+			margin-left: 2px;
+			&:hover {
+				background-image: linear-gradient(0deg, #e77d00 0%, #f6a60d 100%);
+				a.nav-item__link {
+					font-size: 13px;
+					font-family: SwissMediumItalic, sans-serif;
+					font-weight: 500;
+					text-transform: uppercase;
+				}
+				.dropdown-menu {
+					transition: all 0.3s;
+					top: 100%;
+					z-index: 1;
+					opacity: 1;
+					height: 150px;
+					&__link{
+						transition: all 0.8s;
+						color: #fff;
+					}
+				}
+			}
+
+			&__link {
+				display: block;
+				width: 100%;
+				padding: 10px 0;
+				text-align: center;
+				font-family: Swiss, sans-serif;
+				font-size: 14px;
+				color: #fff;
+				letter-spacing: 0.35px;
+				text-decoration: none;
+			}
+
+			.dropdown-menu {
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				top: 20px;
+				left: 0;
+				list-style-type: none;
+				width: 172px;
+				height: 0;
+				z-index: -1;
+				opacity: 0;
+				padding: 6px 0 10px;
+				background-image: linear-gradient(
+					90deg,
+					rgba(231, 126, 0, 1) 0%,
+					rgba(246, 166, 12, 1) 100%
+				);
+
+				&__item {
+					&:hover {
+						background-color: #4e4e4e;
+					}
+				}
+
+				&__link {
+					display: block;
+					padding: 6px;
+					color: transparent;
+					font-size: 11px;
+					letter-spacing: 0.28px;
+					text-decoration: none;
+					cursor: pointer;
+					&:hover {
+						font-family: Tahoma, sans-serif;
+						font-size: 12px;
+					}
+				}
+			}
+			&:last-child ul {
+				left: auto;
+				right: 0;
+			}
+		}
 	}
 }
