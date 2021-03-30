@@ -1,9 +1,10 @@
-// @import 'libs/bootstrap-reboot.min';
+@import 'libs/bootstrap-reboot.min';
 
 @import 'base/variables';
 @import 'base/mixins';
 
+/* ------------------------------ fonts styles ----------------------------- */
 @import './fonts/fonts.scss';
 
-
+/* ------------------------------ custom styles ----------------------------- */
 @import './blocks/header';

@@ -20,8 +20,8 @@ const { src, dest, series, parallel } = require('gulp'),
 
 // ===========================================================================
 // const dist = '/var/www/dev/assembly_gulp/';
-// const dist = 'dist';
-const dist = require('path').basename(__dirname);
+const dist = 'dist';
+// const dist = require('path').basename(__dirname);
 
 const distFolder = dist,
 	sourceFolder = 'src',
@@ -37,14 +37,14 @@ const distFolder = dist,
 			html: [sourceFolder + '/*.html', '!' + sourceFolder + '/_*.html'],
 			css: sourceFolder + '/sass/style.scss',
 			js: sourceFolder + '/js/script.js',
-			img: sourceFolder + '/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}',
+			img: sourceFolder + '/img/**/*.+(jpg|jpeg|png|svg|gif|ico|webp)',
 			fonts: sourceFolder + '/fonts/*.ttf',
 		},
 		watch: {
 			html: sourceFolder + '/**/*.html',
 			css: sourceFolder + '/sass/**/*.+(scss|sass)',
 			js: sourceFolder + '/js/**/*.js',
-			img: sourceFolder + '/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}',
+			img: sourceFolder + '/img/**/*.+(jpg|jpeg|png|svg|gif|ico|webp)',
 		},
 		clean: './' + distFolder + '/',
 	};
@@ -139,15 +139,15 @@ function scriptJS() {
 
 // images =====================================================================
 
-function img2webp() {
-	return src(path.src.img)
+async function img2webp() {
+	return await src(path.src.img)
 		.pipe(webp({ quality: 70 }))
 		.pipe(dest(path.build.img))
 		.pipe(browserSync.stream());
 }
 
-function images() {
-	return src(path.src.img)
+async function images() {
+	return await src(path.src.img)
 		.pipe(
 			imagemin(
 				[
@@ -232,7 +232,6 @@ async function cleanDist() {
 const build = series(
 	cleanDist,
 	fonts,
-	fontsStyle,
 	parallel(images, img2webp),
 	parallel(scriptJS, styles, html)
 );

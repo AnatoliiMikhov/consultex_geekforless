@@ -1,4 +1,3 @@
-/* -------------- sourse https://fls.guru/gulp.html ----------------------- */
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
 		font-family: $font_name;
@@ -9,3 +8,5 @@
 		font-style: #{$style};
 	}
 }
+
+// custom mixins
