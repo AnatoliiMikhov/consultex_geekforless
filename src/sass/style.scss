@@ -7,4 +7,10 @@
 @import './fonts/fonts.scss';
 
 /* ------------------------------ custom styles ----------------------------- */
+
+*{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+@import './blocks/container';
 @import './blocks/header';
