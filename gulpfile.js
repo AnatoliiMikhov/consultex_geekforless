@@ -139,15 +139,15 @@ function scriptJS() {
 
 // images =====================================================================
 
-async function img2webp() {
-	return await src(path.src.img)
+function img2webp() {
+	return src(path.src.img)
 		.pipe(webp({ quality: 70 }))
 		.pipe(dest(path.build.img))
 		.pipe(browserSync.stream());
 }
 
-async function images() {
-	return await src(path.src.img)
+function images() {
+	return src(path.src.img)
 		.pipe(
 			imagemin(
 				[
@@ -167,9 +167,9 @@ async function images() {
 
 // fonts ======================================================================
 
-async function fonts() {
-	await src(path.src.fonts).pipe(ttf2woff()).pipe(dest(path.build.fonts));
-	return await src(path.src.fonts).pipe(ttf2woff2()).pipe(dest(path.build.fonts));
+function fonts() {
+	src(path.src.fonts).pipe(ttf2woff()).pipe(dest(path.build.fonts));
+	return src(path.src.fonts).pipe(ttf2woff2()).pipe(dest(path.build.fonts));
 }
 
 async function fontsStyle() {
