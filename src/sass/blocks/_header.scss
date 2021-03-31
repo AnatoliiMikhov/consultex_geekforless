@@ -10,6 +10,7 @@
 	}
 
 	.logo {
+		position: relative;
 		display: flex;
 		align-items: center;
 
@@ -75,7 +76,7 @@
 					z-index: 1;
 					opacity: 1;
 					height: 150px;
-					&__link{
+					&__link {
 						transition: all 0.8s;
 						color: #fff;
 					}
@@ -137,6 +138,15 @@
 				left: auto;
 				right: 0;
 			}
+		}
+	}
+	.privacy {
+		position: absolute;
+		right: -60px;
+
+		a {
+			color: #fff;
+			font-size: 16px;
 		}
 	}
 }
